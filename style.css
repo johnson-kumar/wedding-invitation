@@ -1,0 +1,108 @@
+:root {
+    --gold: #D4AF37;
+    --maroon: #800000;
+    --cream: #FFFDF5;
+}
+
+body {
+    margin: 0;
+    background-color: var(--cream);
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+/* Login Styling */
+#login-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(135deg, var(--maroon), #4a0000);
+    display: flex; justify-content: center; align-items: center;
+    z-index: 1000;
+}
+
+.login-box {
+    background: var(--cream);
+    padding: 40px;
+    border-radius: 20px;
+    border: 3px solid var(--gold);
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.mandala-icon { font-size: 3rem; margin-bottom: 10px; }
+
+input {
+    width: 90%; padding: 12px; margin: 20px 0;
+    border: 1px solid var(--gold); border-radius: 8px;
+}
+
+button {
+    background: var(--maroon); color: white;
+    padding: 12px 25px; border: none; border-radius: 8px;
+    cursor: pointer; font-weight: bold;
+}
+
+.error-text { color: red; font-size: 0.9rem; display: none; margin-top: 15px; font-weight: bold;}
+
+/* Invitation Styling */
+.hero {
+    padding: 60px 20px;
+    background: url('https://www.transparenttextures.com/patterns/paper-fibers.png'); /* Subtle texture */
+}
+
+.intro-text { font-family: 'Cinzel', serif; letter-spacing: 2px; color: var(--maroon); }
+
+.couple-names {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4.5rem;
+    color: var(--maroon);
+    margin: 20px 0;
+    text-shadow: 2px 2px var(--gold);
+}
+
+#guestNameDisplay { font-family: 'Cinzel', serif; font-size: 1.5rem; color: #555; }
+
+.event-card {
+    background: white;
+    margin: 20px auto;
+    width: 85%;
+    padding: 25px;
+    border-radius: 15px;
+    border-left: 5px solid var(--gold);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+#music-control {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--maroon);
+    color: var(--gold);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 999;
+    border: 2px solid var(--gold);
+    font-size: 1.5rem;
+}
+
+/* Add a pulse effect to the music button */
+#music-control {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+.event-title { font-family: 'Cinzel', serif; color: var(--maroon); margin-top: 0; }
+
+.wedding-card { border: 2px solid var(--gold); background: #fff9f0; }
+
+.footer-msg { font-family: 'Great Vibes', cursive; font-size: 2rem; margin: 40px 0; color: var(--maroon); }
