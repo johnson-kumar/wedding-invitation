@@ -2,7 +2,7 @@ async function checkGuest() {
     const inputNum = document.getElementById('mobileInput').value.trim();
     const errorMsg = document.getElementById('error-msg');
     
-    // IMPORTANT: Replace this with your Google Sheet CSV Link
+    
     const csvUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ39MpyVBKsQGbJQ-9ohqSrCmzSxqytZ7ZOi85JXKk1hBPAVLJvXC7OAuQElg3f7c9LiJr_-s8n3L-r/pub?output=csv'; 
 
     try {
@@ -31,7 +31,8 @@ async function checkGuest() {
             document.getElementById('guestNameDisplay').innerText = `Welcome, ${guestName} & Family`;
             window.scrollTo(0, 0); // Scroll to top
         } else {
-            // Show "You are not invited" message
+            
+
             errorMsg.style.display = 'block';
             errorMsg.classList.add('animate__animated', 'animate__shakeX');
         }

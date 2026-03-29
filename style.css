@@ -91,7 +91,7 @@ button {
     font-size: 1.5rem;
 }
 
-/* Add a pulse effect to the music button */
+
 #music-control {
     animation: pulse 2s infinite;
 }
