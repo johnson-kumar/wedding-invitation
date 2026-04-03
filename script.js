@@ -28,7 +28,7 @@ async function checkGuest() {
         if (guestName) {
             document.getElementById('login-overlay').style.display = 'none';
             document.getElementById('invitation-content').style.display = 'block';
-            document.getElementById('guestNameDisplay').innerText = `Welcome, ${guestName} & Family`;
+            document.getElementById('guestNameDisplay').innerText = `dear ${guestName}, your presence would mean the world to us as we celebrate this special day. we warmly invite you to join the wedding of Vinanjay and Kulsume and bless us with your love and good wishes.`;
             window.scrollTo(0, 0); // Scroll to top
         } else {
             
