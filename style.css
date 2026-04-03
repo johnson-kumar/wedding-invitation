@@ -1,96 +1,157 @@
+/* 1. Global Setup - Using a clean Serif for titles and Sans-Serif for body */
 :root {
-    --gold: #D4AF37;
-    --maroon: #800000;
-    --cream: #FFFDF5;
+    --primary-color: #5d4037; /* Deep Earthy Brown - Very Professional */
+    --accent-color: #c1a35f;  /* Muted Gold */
+    --bg-color: #ffffff;      /* Pure White for Minimalism */
+    --text-soft: #757575;
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
 }
 
 body {
     margin: 0;
-    background-color: var(--cream);
-    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    background-color: var(--bg-color);
+    font-family: 'Poppins', sans-serif; /* Clean modern font */
     color: #333;
+    line-height: 1.6;
 }
 
-/* Login Styling */
+/* 2. Professional Login Overlay */
 #login-overlay {
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: linear-gradient(135deg, var(--maroon), #4a0000);
+    background: var(--bg-color);
     display: flex; justify-content: center; align-items: center;
     z-index: 1000;
 }
 
 .login-box {
-    background: var(--cream);
-    padding: 40px;
-    border-radius: 20px;
-    border: 3px solid var(--gold);
+    width: 85%;
+    max-width: 400px;
     text-align: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    padding: 40px 20px;
 }
 
-.mandala-icon { font-size: 3rem; margin-bottom: 10px; }
+.login-box h2 {
+    font-family: 'Cinzel', serif;
+    font-weight: 400;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+}
 
 input {
-    width: 90%; padding: 12px; margin: 20px 0;
-    border: 1px solid var(--gold); border-radius: 8px;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 25px;
+    font-size: 16px; /* Prevents auto-zoom on iPhone */
+    outline: none;
+    text-align: center;
 }
 
 button {
-    background: var(--maroon); color: white;
-    padding: 12px 25px; border: none; border-radius: 8px;
-    cursor: pointer; font-weight: bold;
+    background: none;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 12px 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-.error-text { color: red; font-size: 0.9rem; display: none; margin-top: 15px; font-weight: bold;}
+button:hover {
+    background: var(--primary-color);
+    color: white;
+}
 
-/* Invitation Styling */
+.error-text { 
+    color: #b71c1c; 
+    font-size: 13px; 
+    margin-top: 15px; 
+    display: none; 
+}
+
+/* 3. Main Invitation Content */
+#invitation-content {
+    max-width: 500px; /* Perfect for mobile viewing */
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
 .hero {
-    padding: 60px 20px;
-    background: url('https://www.transparenttextures.com/patterns/paper-fibers.png'); /* Subtle texture */
+    margin-bottom: 60px;
+    padding-top: 40px;
 }
 
-.intro-text { font-family: 'Cinzel', serif; letter-spacing: 2px; color: var(--maroon); }
+.intro-text {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: var(--text-soft);
+}
 
 .couple-names {
     font-family: 'Great Vibes', cursive;
-    font-size: 4.5rem;
-    color: var(--maroon);
-    margin: 20px 0;
-    text-shadow: 2px 2px var(--gold);
-   alignment-baseline: central;
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    margin: 15px 0;
 }
 
-#guestNameDisplay { font-family: 'Cinzel', serif; font-size: 1.5rem; color: #2e2d2d; }
+#guestNameDisplay {
+    font-family: 'Cinzel', serif;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    color: var(--accent-color);
+}
 
+/* 4. Minimalist Event Cards */
 .event-card {
-    background: white;
-    margin: 20px auto;
-    width: 55%;
-    padding: 25px;
-    border-radius: 15px;
-    border-left: 5px solid var(--gold);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    margin: 50px 0;
+    padding: 20px 0;
+    border-top: 1px solid #f0f0f0;
 }
 
-/* Apply wedding card style to Mehendi and Haldi for matching look */
-.mahendi-card,
-.mahendi-card {
-    border: 2px solid var(--gold);
-    background: #fff9f0;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+.event-title {
+    font-family: 'Cinzel', serif;
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    color: var(--primary-color);
+    margin-bottom: 10px;
 }
 
-/* Keep Haldi-specific green accent on left side */
-.haldi-card {
-    border-left-color: rgb(251, 255, 0);
-    /* keep the base card border green if desired */
-    border-color: rgb(255, 238, 0);
-    box-shadow: 0 5px 15px rgba(0,128,0,0.2);
+.event-card p {
+    margin: 5px 0;
+    color: var(--text-soft);
+    font-size: 14px;
 }
 
-.event-title { font-family: 'Cinzel', serif; color: var(--maroon); margin-top: 0; }
+/* 5. Map & Footer */
+.location-box h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
 
-.wedding-card { border: 2px solid var(--gold); background: #fff9f0; }
+.footer-msg {
+    margin-top: 80px;
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+}
 
-.footer-msg { font-family: 'Great Vibes', cursive; font-size: 2rem; margin: 40px 0; color: var(--maroon); }
+/* Floating Music Icon - Minimalist */
+#music-control {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    font-size: 18px;
+    opacity: 0.6;
+}
