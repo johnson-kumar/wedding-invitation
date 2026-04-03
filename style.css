@@ -58,49 +58,37 @@ button {
     color: var(--maroon);
     margin: 20px 0;
     text-shadow: 2px 2px var(--gold);
+   alignment-baseline: central;
 }
 
-#guestNameDisplay { font-family: 'Cinzel', serif; font-size: 1.5rem; color: #555; }
+#guestNameDisplay { font-family: 'Cinzel', serif; font-size: 1.5rem; color: #2e2d2d; }
 
 .event-card {
     background: white;
     margin: 20px auto;
-    width: 85%;
+    width: 55%;
     padding: 25px;
     border-radius: 15px;
     border-left: 5px solid var(--gold);
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
-#music-control {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: var(--maroon);
-    color: var(--gold);
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    z-index: 999;
+/* Apply wedding card style to Mehendi and Haldi for matching look */
+.mahendi-card,
+.mahendi-card {
     border: 2px solid var(--gold);
-    font-size: 1.5rem;
+    background: #fff9f0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
-
-#music-control {
-    animation: pulse 2s infinite;
+/* Keep Haldi-specific green accent on left side */
+.haldi-card {
+    border-left-color: rgb(251, 255, 0);
+    /* keep the base card border green if desired */
+    border-color: rgb(255, 238, 0);
+    box-shadow: 0 5px 15px rgba(0,128,0,0.2);
 }
 
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
-}
 .event-title { font-family: 'Cinzel', serif; color: var(--maroon); margin-top: 0; }
 
 .wedding-card { border: 2px solid var(--gold); background: #fff9f0; }
